@@ -37,20 +37,8 @@ The median of the total number of steps taken per day is 0.
 Compute the average number of steps per interval
 
 ```r
-totalStepsPerInterval <- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=sum)
 library(plyr)
-```
-
-```
-## 
-## Attaching package: 'plyr'
-## 
-## The following object is masked from 'package:lubridate':
-## 
-##     here
-```
-
-```r
+totalStepsPerInterval <- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=sum)
 averageStepsPerInterval <- mutate(totalStepsPerInterval, x = x / nrow(totalStepsPerDay))
 ```
 

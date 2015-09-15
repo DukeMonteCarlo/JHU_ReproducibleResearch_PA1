@@ -29,9 +29,9 @@ The median of the total number of steps taken per day is `r medianStepsPerDay`.
 
 ## What is the average daily activity pattern? ##
 Compute the average number of steps per interval
-```{r}
-totalStepsPerInterval <- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=sum)
+```{r, results="hide"}
 library(plyr)
+totalStepsPerInterval <- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=sum)
 averageStepsPerInterval <- mutate(totalStepsPerInterval, x = x / nrow(totalStepsPerDay))
 ```
 
