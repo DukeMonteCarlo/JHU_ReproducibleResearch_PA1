@@ -38,8 +38,19 @@ Compute the average number of steps per interval
 
 ```r
 library(plyr)
-totalStepsPerInterval <- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=sum)
-averageStepsPerInterval <- mutate(totalStepsPerInterval, x = x / nrow(totalStepsPerDay))
+```
+
+```
+## 
+## Attaching package: 'plyr'
+## 
+## The following object is masked from 'package:lubridate':
+## 
+##     here
+```
+
+```r
+averageStepsPerInterval <- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=mean)
 ```
 
 Create the time-series plot of the 5-minute inteval and the average number of steps taken, averaged across all days
@@ -118,10 +129,8 @@ imputedCompleteActivityWeekdays <- imputedCompleteActivity[imputedCompleteActivi
 Compute total numbers of steps per interval for weekend and weekdays
 
 ```r
-totalStepsPerIntervalFilledInWeekdays <- aggregate(imputedCompleteActivityWeekdays$steps, by=list(interval=imputedCompleteActivityWeekdays$interval), FUN=sum)
-averageStepsPerIntervalWeekdays <- mutate(totalStepsPerIntervalFilledInWeekdays, x = x / nrow(imputedCompleteActivityWeekdays))
-totalStepsPerIntervalFilledInWeekend <- aggregate(imputedCompleteActivityWeekend$steps, by=list(interval=imputedCompleteActivityWeekend$interval), FUN=sum)
-averageStepsPerIntervalWeekend <- mutate(totalStepsPerIntervalFilledInWeekend, x = x / nrow(imputedCompleteActivityWeekend))
+averageStepsPerIntervalWeekdays <- aggregate(imputedCompleteActivityWeekdays$steps, by=list(interval=imputedCompleteActivityWeekdays$interval), FUN=mean)
+averageStepsPerIntervalWeekend <- aggregate(imputedCompleteActivityWeekend$steps, by=list(interval=imputedCompleteActivityWeekend$interval), FUN=mean)
 ```
 
 Create the time-series plots of the 5-minute inteval and the average number of steps taken, averaged across all days for weekend and weekdays

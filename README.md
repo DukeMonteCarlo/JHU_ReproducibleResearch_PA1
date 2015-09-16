@@ -22,4 +22,6 @@ To reproduce the result, please do the following
 
 1. Download the [Activity Monitoring Data](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip), unzip the file and place the activity.csv file in the working directory.
 2. Download the PA1_template.Rmd from this Github repository into the working directory.
-3. On the R console, run knit2html to produce the PA1_template.html, PA1_template.md and the png files under the figure directory.
+3. On the R console, do the following to produce the PA1_template.html, PA1_template.md and the png files under the figure directory.
+	- library(knitr)
+	- knit2html("PA1_template.Rmd")
