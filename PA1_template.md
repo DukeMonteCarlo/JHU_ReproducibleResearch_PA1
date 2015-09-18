@@ -38,18 +38,6 @@ Compute the average number of steps per interval
 
 ```r
 library(plyr)
-```
-
-```
-## 
-## Attaching package: 'plyr'
-## 
-## The following object is masked from 'package:lubridate':
-## 
-##     here
-```
-
-```r
 averageStepsPerInterval <- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=mean)
 ```
 

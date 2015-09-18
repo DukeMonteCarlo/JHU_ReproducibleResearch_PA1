@@ -237,17 +237,7 @@ The median of the total number of steps taken per day is 10765.</p>
 <p>Compute the average number of steps per interval</p>
 
 <pre><code class="r">library(plyr)
-</code></pre>
-
-<pre><code>## 
-## Attaching package: &#39;plyr&#39;
-## 
-## The following object is masked from &#39;package:lubridate&#39;:
-## 
-##     here
-</code></pre>
-
-<pre><code class="r">averageStepsPerInterval &lt;- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=mean)
+averageStepsPerInterval &lt;- aggregate(completeActivity$steps, by=list(interval=completeActivity$interval), FUN=mean)
 </code></pre>
 
 <p>Create the time-series plot of the 5-minute inteval and the average number of steps taken, averaged across all days</p>
