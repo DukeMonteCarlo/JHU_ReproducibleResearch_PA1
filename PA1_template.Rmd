@@ -20,8 +20,8 @@ hist(totalStepsPerDay$x, main="Histogram of Total Steps per Day", xlab="Total Nu
 
 Compute the mean and median of the total number of steps taken per day
 ```{r}
-meanStepsPerDay <- mean(completeActivity$steps)
-medianStepsPerDay <- median(completeActivity$steps)
+meanStepsPerDay <- mean(totalStepsPerDay$x)
+medianStepsPerDay <- median(totalStepsPerDay$x)
 ```
 
 The mean of the total number of steps taken per day is `r meanStepsPerDay`.
@@ -74,8 +74,8 @@ hist(totalStepsPerDayFilledIn$x, main="Histogram of Total Steps per Day with Mis
 
 Compute the mean and median of the total number of steps taken per day
 ```{r}
-meanStepsPerDayFilledIn <- mean(imputedCompleteActivity$steps)
-medianStepsPerDayFilledIn <- median(imputedCompleteActivity$steps)
+meanStepsPerDayFilledIn <- mean(totalStepsPerDayFilledIn$x)
+medianStepsPerDayFilledIn <- median(totalStepsPerDayFilledIn$x)
 ```
 
 The mean of the total number of steps taken per day using the dataset with NA filled in is `r meanStepsPerDayFilledIn`.

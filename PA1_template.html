@@ -225,12 +225,12 @@ completeActivity &lt;- activity[complete.cases(activity),]
 
 <p>Compute the mean and median of the total number of steps taken per day</p>
 
-<pre><code class="r">meanStepsPerDay &lt;- mean(completeActivity$steps)
-medianStepsPerDay &lt;- median(completeActivity$steps)
+<pre><code class="r">meanStepsPerDay &lt;- mean(totalStepsPerDay$x)
+medianStepsPerDay &lt;- median(totalStepsPerDay$x)
 </code></pre>
 
-<p>The mean of the total number of steps taken per day is 37.3825996.
-The median of the total number of steps taken per day is 0.</p>
+<p>The mean of the total number of steps taken per day is 1.0766189 &times; 10<sup>4</sup>.
+The median of the total number of steps taken per day is 10765.</p>
 
 <h2>What is the average daily activity pattern?</h2>
 
@@ -297,12 +297,12 @@ for(i in 1:nrow(imputedCompleteActivity)) {
 
 <p>Compute the mean and median of the total number of steps taken per day</p>
 
-<pre><code class="r">meanStepsPerDayFilledIn &lt;- mean(imputedCompleteActivity$steps)
-medianStepsPerDayFilledIn &lt;- median(imputedCompleteActivity$steps)
+<pre><code class="r">meanStepsPerDayFilledIn &lt;- mean(totalStepsPerDayFilledIn$x)
+medianStepsPerDayFilledIn &lt;- median(totalStepsPerDayFilledIn$x)
 </code></pre>
 
-<p>The mean of the total number of steps taken per day using the dataset with NA filled in is 37.3825996.
-The median of the total number of steps taken per day using the dataset with NA filled in is 0.</p>
+<p>The mean of the total number of steps taken per day using the dataset with NA filled in is 1.0766189 &times; 10<sup>4</sup>.
+The median of the total number of steps taken per day using the dataset with NA filled in is 1.0766189 &times; 10<sup>4</sup>.</p>
 
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 

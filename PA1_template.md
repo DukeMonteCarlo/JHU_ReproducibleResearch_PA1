@@ -26,12 +26,12 @@ hist(totalStepsPerDay$x, main="Histogram of Total Steps per Day", xlab="Total Nu
 Compute the mean and median of the total number of steps taken per day
 
 ```r
-meanStepsPerDay <- mean(completeActivity$steps)
-medianStepsPerDay <- median(completeActivity$steps)
+meanStepsPerDay <- mean(totalStepsPerDay$x)
+medianStepsPerDay <- median(totalStepsPerDay$x)
 ```
 
-The mean of the total number of steps taken per day is 37.3825996.
-The median of the total number of steps taken per day is 0.
+The mean of the total number of steps taken per day is 1.0766189 &times; 10<sup>4</sup>.
+The median of the total number of steps taken per day is 10765.
 
 ## What is the average daily activity pattern? ##
 Compute the average number of steps per interval
@@ -104,12 +104,12 @@ hist(totalStepsPerDayFilledIn$x, main="Histogram of Total Steps per Day with Mis
 Compute the mean and median of the total number of steps taken per day
 
 ```r
-meanStepsPerDayFilledIn <- mean(imputedCompleteActivity$steps)
-medianStepsPerDayFilledIn <- median(imputedCompleteActivity$steps)
+meanStepsPerDayFilledIn <- mean(totalStepsPerDayFilledIn$x)
+medianStepsPerDayFilledIn <- median(totalStepsPerDayFilledIn$x)
 ```
 
-The mean of the total number of steps taken per day using the dataset with NA filled in is 37.3825996.
-The median of the total number of steps taken per day using the dataset with NA filled in is 0.
+The mean of the total number of steps taken per day using the dataset with NA filled in is 1.0766189 &times; 10<sup>4</sup>.
+The median of the total number of steps taken per day using the dataset with NA filled in is 1.0766189 &times; 10<sup>4</sup>.
 
 ## Are there differences in activity patterns between weekdays and weekends? ##
 Create a new factor indicating whether it is in weekdays or weekend
